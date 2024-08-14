@@ -133,3 +133,7 @@ Cilgerran Castle board comes as both a single board (with connectors) and as a k
 - 1x 2x8 IDC Connector
 - 1x 1M 16pin Rainbow Wire
 - 6x Bright White LED's
+
+## Schematics
+
+![CilgerranPG2p0Schematic](https://github.com/user-attachments/assets/079c2b2d-b7ee-416d-8114-96ad34fee477)
