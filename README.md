@@ -9,6 +9,13 @@ With 8 potential control signals coming up from the Wemos D1 Mini board that act
 
 The danger with simply using transistors to drive high current/power outputs is that transistors don't have any way of limiting their power output. Pull too much power and they send themselves to the silicon heaven. This is solved on the Cilgerran Castle board by using a single electronic power switch that has built in short circuit protection. If any of the outputs become shorted, then they will all go off.  D0 is used to enable VLED. 
 
+## What does a solution look like?
+![VerticalStack](https://github.com/user-attachments/assets/601e2180-1c62-4092-af63-614ac53a7921)
+
+A wemos D1 mini acts as the brain. It can no basic "on off" control for things like lightning effects, all the way through to fancy WiFi controls.
+The pins pointing at the camera bring 6 high power LED outputs and 2 Motor Control outputs.
+
+
 ## Cool use cases
 With it's ability drive 6 high power led's along with 2 more LEDs/ DC Motor from a smart source, existing code examples are available for:
 
