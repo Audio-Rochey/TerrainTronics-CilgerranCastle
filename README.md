@@ -25,10 +25,13 @@ The pins pointing at the camera bring 6 high power LED outputs and 2 Motor Contr
 I used a 2x8 IDC connector ( [Amazon](https://a.co/d/hbylqzd) ) and ([Amazon](https://a.co/d/8xHjDtx) ) 16pin 1.27mm ribbon cable to handle the outputs from Cilgerran. These are included in the kit, or easily found from amazon.
 Doing so allows you build your terrain to a single connector then 
 
+
 ## Cool use cases
 With it's ability drive 6 high power led's along with 2 more LEDs/ DC Motor from a smart source, existing code examples are available for:
 
 ### High Power Lightning Source
+
+![CilgerranLightningDemo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e70998f4-21b9-4e66-8c89-5a48f38aac53)
 
 [Code Link](https://github.com/Audio-Rochey/TerrainTronics-CilgerranCastle/blob/d75bde7df7b1238a8ec136d23894cc93ea2bdc64/Code%20Examples/6chLightning.ino)
 
