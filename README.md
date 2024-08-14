@@ -13,11 +13,17 @@ The danger with simply using transistors to drive high current/power outputs is 
 With it's ability drive 6 high power led's along with 2 more LEDs/ DC Motor from a smart source, existing code examples are available for:
 
 ### High Power Lightning Source
+
+[Code Link](https://github.com/Audio-Rochey/TerrainTronics-CilgerranCastle/blob/d75bde7df7b1238a8ec136d23894cc93ea2bdc64/Code%20Examples/6chLightning.ino)
+
 Some time ago, I made custom high power lightning effects for an entire tabletop of terrain that John at Tabletop Witchcraft was working on with the cool guys over at Wyrmwood Gaming! 
 That solution used an off-the-shelf Arduino compatible DigiSpark board, an external transistor drive (Carew Castle) for single cloud. 
 Using a Wemos D1 Mini along wiht this Carew Castle board now allows me to drive lightning strikes in up to 8 different clouds, all with randomized timings are behaviours. The code is available HERE:
 
 ### DMX Controller
+
+[Code Link to come]
+
 I'm addicted to the epic work done by Seb at Atmoseeker ([LINK](https://www.youtube.com/@Atmoseeker)). He controls all of his environmental lights using a stage lighting protocol called DMX. Many ceiling stage lights use DMX as their control method, along with a Wifi-variation called XYZ. 
 DMX is designed for stage production where you have scenes, so you can do things like change from night to day. Imagine being able to change your ceiling lights from daylight to purples and blues and then having your tabletop buildings switch on their inhouse lights etc!
 Example code (that needs further work!) is available here:
