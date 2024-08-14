@@ -42,6 +42,17 @@ D1,2,5,6,7 can be used as inputs, however, make sure that the output is not conn
 > Note: If D1 and D2 are both held HIGH (1) or both held LOW (0), the outputs from the MotorA and MotorB pins will be LOW.
 Crossed out pins cannot be used as an input, as they have various functions at power on.
 
+| LED Output Header Pin | Wemos D1 Pin          |
+| --------------------- |-----------------------|
+| LED Output 1          | D5 |
+| LED Output 2          | D6 |
+| LED Output 3          | D7 |
+| ~LED Output 4~         | ~D8~ |
+| ~LED Output 5~        | ~D4~ |
+| ~LED Output 6~        | ~D3~ |
+| MOTOR A               | D1 |
+| MOTOR B               | D2 |
+
 It's left as an excercise to the reader how you wish to connect to the appropriate pin. Check video's to see clever wiring hacks. 
 An example of an input may be using a magnetic sensor to know when your motor has turned 360 degrees. In which case, you might choose Wemos Pin D5. D5 is connected to output channel 1, so don't use that outpin for an LED!
 
