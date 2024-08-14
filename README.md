@@ -15,7 +15,7 @@ The danger with simply using transistors to drive high current/power outputs is 
 
 ![VerticalStack](https://github.com/user-attachments/assets/601e2180-1c62-4092-af63-614ac53a7921)
 
-A wemos D1 mini acts as the brain. It can no basic "on off" control for things like lightning effects, all the way through to fancy WiFi controls.
+A wemos D1 mini acts as the brain. It can do basic "on off" control for things like lightning effects, all the way through to fancy WiFi controls.
 The pins pointing at the camera bring 6 high power LED outputs and 2 Motor Control outputs.
 
 ### Wiring
