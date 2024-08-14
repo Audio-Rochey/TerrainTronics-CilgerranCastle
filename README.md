@@ -28,14 +28,18 @@ The LED outputs on the Cigerran Castle boards don't actually connect a high volt
  
 In addition, the outputs on the Cilgerran board don't have any kind of current limiting, so make sure that your LED's have a resistor in series with them. On a 1W Star LED, that looks like this: -- on a pre-wired LED from Amazon, look for the lump in the line! If you're really unsure, you can actually drive a CONWY CASTLE board from each of these outputs.
 
+> Make sure you're limiting the power for LED's - either use an external resistor, a Conwy Castle board or buy your 1W 5V LED's that have a Resistor already on them!
+
 ### MOTORS
-The Cilgerran Castle board is designed to drive a single DC motor, such as N20 Motor. The A&B output pins are used directly to the motor. Use D1 and D2 to change direction of the Motor. Both pins can be PWM'd on the Wemos D1. However, the default Arduino implimentation on the D1 runs at 1kHZ - within Audio range. Some motors will make an audible tone.
+The Cilgerran Castle board is designed to drive a single DC motor, such as N20 Motor. The A&B output pins are used directly to the motor. Use D1 and D2 to change direction of the Motor. Both pins can be PWM'd on the Wemos D1. However, the default Arduino implimentation on the D1 runs at 1kHZ - within Audio range. Some motors will make an audible tone. 
+
+> Where possible look for the a motor with the right RPM (Revolutions per minute) gearing for your target voltage (5V?) - for instance 6RPM at 5V would mean it takes 10 Seconds at full power to do a complete revolution. Getting slower speed using PWM (AnalogOut) will generate audible noise.
 
 ## What if you Need inputs?
 The board is designed to use as many of it's pins as outputs. If however, you want to use on of the pins on the Wemos D1 mini as an INPUT instead of an output, then just make sure that the output that's normally connected to it, is not hooked up to an LED.
 D1,2,5,6,7 can be used as inputs, however, make sure that the output is not connected to an LED etc. (the transistor will still be connected etc).
 
-*Note: If D1 and D2 are both held HIGH (1) or both held LOW (0), the outputs from the MotorA and MotorB pins will be LOW.
+> Note: If D1 and D2 are both held HIGH (1) or both held LOW (0), the outputs from the MotorA and MotorB pins will be LOW.
 Crossed out pins cannot be used as an input, as they have various functions at power on.
 
 It's left as an excercise to the reader how you wish to connect to the appropriate pin. Check video's to see clever wiring hacks. 
@@ -82,7 +86,7 @@ However, not all setups have enough room for such a circuit!
 Rechargable, Lithium Ion Battery cells are available from Amazon and other places that can be used. There are two pads on the Cilgerran board that the batteries can be connected to. 
 
 For rechargable batteries, I suggest using a wired connector, such as: - that will then allow you to "unplug" the battery, and recharge it with a separate charge circuit when it's power runs too low. (https://a.co/d/9qAoYhL)
-Note - always make sure the polarity of your battery connector matches the polarity of the wire going to the Cilgerran board. 
+> Note - always make sure the polarity of your battery connector matches the polarity of the wire going to the Cilgerran board. 
 
 LiPoly batteries provide a battery voltage that starts at about 4.2V when fully charged, and can run down to 2.7V. If they are run lower, then you can do some permanent damage to the batteries. It's important that you limit the power draw to as little as possible once you reach 2.7V.
 I strongly suggest using a little code that checks the battery voltage and if it's below 2.8V, putting the entire board into shutdown/standby. (thus switching off the LED's, Motors).
