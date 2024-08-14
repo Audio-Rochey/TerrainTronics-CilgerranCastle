@@ -1,5 +1,6 @@
 # TerrainTronics-CilgerranCastle
 6ch High Power LED Driver with Additional Motor driver
+![Cilgerran Castle Intro Picture](https://github.com/user-attachments/assets/df3579ee-54e9-4fa5-a58d-67ecf89b8970)
 
 ## Why it exists and the problems it fixes
 The Cilgerran castle was originally intended to drive a bunch of higher power LED's. Driving small LED's is quite simple, but as we move to long LED strings and the 1 watt and 3 Watt "Star LED's", driving them from smart sources, like Arduino's becomes harder and harder as the arduino's and microcontrollers like them aren't designed to drive high current and power output.
@@ -17,7 +18,7 @@ That solution used an off-the-shelf Arduino compatible DigiSpark board, an exter
 Using a Wemos D1 Mini along wiht this Carew Castle board now allows me to drive lightning strikes in up to 8 different clouds, all with randomized timings are behaviours. The code is available HERE:
 
 ### DMX Controller
-I'm addicted to the epic work done by Seb at Atmoseeker (LINK). He controls all of his environmental lights using a stage lighting protocol called DMX. Many ceiling stage lights use DMX as their control method, along with a Wifi-variation called XYZ. 
+I'm addicted to the epic work done by Seb at Atmoseeker ([LINK](https://www.youtube.com/@Atmoseeker)). He controls all of his environmental lights using a stage lighting protocol called DMX. Many ceiling stage lights use DMX as their control method, along with a Wifi-variation called XYZ. 
 DMX is designed for stage production where you have scenes, so you can do things like change from night to day. Imagine being able to change your ceiling lights from daylight to purples and blues and then having your tabletop buildings switch on their inhouse lights etc!
 Example code (that needs further work!) is available here:
 
@@ -26,12 +27,17 @@ Example code (that needs further work!) is available here:
 ### LED's
 The LED outputs on the Cigerran Castle boards don't actually connect a high voltage on and off. It's the opposite. The VLED voltage is always present, and GND is switch on the other pin, on and off. This has no impact on the type of LED's that can be used, but be aware that there isn't a shared ground between the LED's. It's actually a shared VLED!
  
-In addition, the outputs on the Cilgerran board don't have any kind of current limiting, so make sure that your LED's have a resistor in series with them. On a 1W Star LED, that looks like this: -- on a pre-wired LED from Amazon, look for the lump in the line! If you're really unsure, you can actually drive a CONWY CASTLE board from each of these outputs.
+In addition, the outputs on the Cilgerran board don't have any kind of current limiting, so make sure that your LED's have a resistor in series with them. On a 1W Star LED, that looks like this: 
+![61O0R89F-ULSmall](https://github.com/user-attachments/assets/8797add0-bdbb-4567-9392-5fdf9888335a)
+
+-- on a pre-wired LED from Amazon, look for the lump in the line! If you're really unsure, you can actually drive a CONWY CASTLE board from each of these outputs.
 
 > Make sure you're limiting the power for LED's - either use an external resistor, a Conwy Castle board or buy your 1W 5V LED's that have a Resistor already on them!
 
 ### MOTORS
 The Cilgerran Castle board is designed to drive a single DC motor, such as N20 Motor. The A&B output pins are used directly to the motor. Use D1 and D2 to change direction of the Motor. Both pins can be PWM'd on the Wemos D1. However, the default Arduino implimentation on the D1 runs at 1kHZ - within Audio range. Some motors will make an audible tone. 
+
+![61WdOWZzZNL](https://github.com/user-attachments/assets/dc514dba-0cb6-4780-8c35-1ec9c89bfed3)
 
 > Where possible look for the a motor with the right RPM (Revolutions per minute) gearing for your target voltage (5V?) - for instance 6RPM at 5V would mean it takes 10 Seconds at full power to do a complete revolution. Getting slower speed using PWM (AnalogOut) will generate audible noise.
 
@@ -69,6 +75,9 @@ The alternative to linear regulators are called "buck converters" or dcdc conver
  
 Modify your Wemos D1 mini to use the external dcdc convert by cutting this pin (Pin5 of the MA6211) on the board. Be aware that by doing so, your D1 Mini will never be able to run without a Cilgerran board sitting on top, or without a dab of solder connecting that linear regulator back in place.
 
+![WemosCutTrace](https://github.com/user-attachments/assets/5db445fe-0b07-40c0-971e-4fd7a653d82f)
+
+
 ### Power Efficiency: Switch off Wifi if you aren't going to use it!
 
 In Arduino, you can drop the power consumption significantly by adding the following lines in your SETUP function.
@@ -88,6 +97,7 @@ These lines drop the current consumption from about 80mA to 14mA.
 
 ### Running Directly from an External battery
 There are two pads on the Cilgerran Castle board. They can be connected to a 4.5V Alkaline battery pack (such as a 3xAA battery pack) or a Lithium Ion (LiPoly) battery. It's recommended that you use an external power switch - one that is built into the battery holder.
+![Battery Connectors](https://github.com/user-attachments/assets/cec718d3-8fbc-4914-af9e-7b3c34eca3b9)
 
 USB can be connected to the Wemos board for programming whilst the battery is connected, as a diode is in place to isolate the battery pack if a high voltage source (USB) is present.
 
