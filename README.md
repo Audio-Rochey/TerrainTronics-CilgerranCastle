@@ -35,7 +35,7 @@ With it's ability drive 6 high power led's along with 2 more LEDs/ DC Motor from
 
 [Code Link](https://github.com/Audio-Rochey/TerrainTronics-CilgerranCastle/blob/d75bde7df7b1238a8ec136d23894cc93ea2bdc64/Code%20Examples/6chLightning.ino)
 
-Some time ago, I made custom high power lightning effects for an entire tabletop of terrain that John at Tabletop Witchcraft was working on with the cool guys over at Wyrmwood Gaming! 
+Some time ago, I made custom high power lightning effects for an entire tabletop of terrain that John at Tabletop Witchcraft was working on with the cool guys over at Wyrmwood Gaming!
 That solution used an off-the-shelf Arduino compatible DigiSpark board, an external transistor drive (Carew Castle) for single cloud. 
 Using a Wemos D1 Mini along wiht this Carew Castle board now allows me to drive lightning strikes in up to 8 different clouds, all with randomized timings are behaviours. The code is available HERE:
 
@@ -51,11 +51,11 @@ Example code (that needs further work!) is available here:
 
 ### LED's
 The LED outputs on the Cigerran Castle boards don't actually connect a high voltage on and off. It's the opposite. The VLED voltage is always present, and GND is switch on the other pin, on and off. This has no impact on the type of LED's that can be used, but be aware that there isn't a shared ground between the LED's. It's actually a shared VLED!
- 
+
 In addition, the outputs on the Cilgerran board don't have any kind of current limiting, so make sure that your LED's have a resistor in series with them. On a 1W Star LED, that looks like this: 
 ![61O0R89F-ULSmall](https://github.com/user-attachments/assets/8797add0-bdbb-4567-9392-5fdf9888335a)
 
--- on a pre-wired LED from Amazon, look for the lump in the line! If you're really unsure, you can actually drive a CONWY CASTLE board from each of these outputs.
+-- on a pre-wired LED from Amazon, look for the lump in the line!If you're really unsure, you can actually drive a CONWY CASTLE board from each of these outputs.
 
 > Make sure you're limiting the power for LED's - either use an external resistor, a Conwy Castle board or buy your 1W 5V LED's that have a Resistor already on them!
 
@@ -127,7 +127,7 @@ There are two pads on the Cilgerran Castle board. They can be connected to a 4.5
 USB can be connected to the Wemos board for programming whilst the battery is connected, as a diode is in place to isolate the battery pack if a high voltage source (USB) is present.
 
 ### Considerations for running from a LiPoly Cell.
-Should you run the setup from an external USB Power bank, then simply connect the USB-Micro or USB-C cable to your Wemos d1 as you usually would. Every USB power bank on the planet has a little boost circuit that will provide a consistent 5V USB Power supply to your setup. 
+Should you run the setup from an external USB Power bank, then simply connect the USB-Micro or USB-C cable to your Wemos d1 as you usually would. Every USB power bank on the planet has a little boost circuit that will provide a consistent 5V USB Power supply to your setup.
 However, not all setups have enough room for such a circuit!
 Rechargable, Lithium Ion Battery cells are available from Amazon and other places that can be used. There are two pads on the Cilgerran board that the batteries can be connected to. 
 
